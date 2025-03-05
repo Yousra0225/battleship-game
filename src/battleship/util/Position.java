@@ -35,3 +35,24 @@ public class Position {
    public int getY() {
       return this.y;
    }
+
+    /**
+    * two positions are equals if they haave same coordinates
+    * 
+    * @see java.lang.Object#equals(java.lang.Object)
+    */
+   public boolean equals(Object o) {
+      if (o instanceof Position) {
+         Position other = (Position) o;
+         return this.x == other.x && this.y == other.y;
+      } else {
+         return false;
+      }
+   }
+
+   /**
+    * @see java.lang.Object#toString()
+    */
+   public String toString() {
+      return this.x + " , " + this.y;
+   }
