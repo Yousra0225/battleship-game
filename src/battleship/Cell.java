@@ -45,4 +45,27 @@ public class Cell {
   public boolean hasBeenShot() {
     return this.shot;
   }
+
+  /** Allows you to shot a ship in this cell.
+  * @return MISSED if failed, HIT if touched, SUNK if sunken ship
+  */
+  public Answer shot(){
+      if (this.ship == null){
+          this.shot=true;
+          return Answer.MISSED;
+      }
+      if (!this.hasBeenShot()){
+          this.shot=true;
+          this.ship.beenHitting();
+          if (this.ship.hasBeenSunk()){
+              return Answer.SUNK;
+          }
+          else{
+              return Answer.HIT;
+          }
+      }
+      else{
+          return Answer.MISSED;
+      }
+  }
 }
