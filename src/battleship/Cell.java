@@ -21,4 +21,12 @@ public class Cell {
   public Ship getShip() {
     return this.ship;
   }
+
+  /**
+  * Check if the cell is empty, when his ship is null
+  * @return true if the cell is empty else return false
+  */
+  public Boolean empty(){
+      return this.ship==null;
+  }
 }
