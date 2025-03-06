@@ -29,4 +29,13 @@ public class Cell {
   public Boolean empty(){
       return this.ship==null;
   }
+
+  /**
+  * Set a ship in this cell if she doesn't have a ship actually.
+  * @param s the ship to set
+  */
+  public void setShip(Ship s) {
+    if ( this.getShip() == null)
+      this.ship = s;
+  }
 }
