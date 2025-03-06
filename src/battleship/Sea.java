@@ -58,4 +58,13 @@ import battleship.util.*;
     public int getRemainingLifePoints(){
         return this.totLifePoints;
     }
+
+    /**
+     * get the cell at the p position
+     * @param p the position of the cell that we want get
+     * @return the cell
+     */
+    public Cell getCell(Position p){
+        return this.theCells[p.getX()][p.getY()] ;
+    }
  }
