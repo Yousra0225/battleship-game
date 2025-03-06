@@ -67,4 +67,28 @@ import battleship.util.*;
     public Cell getCell(Position p){
         return this.theCells[p.getX()][p.getY()] ;
     }
+
+    /**
+    * display the game board line by line and cell by cell, on standard output,
+    * the display is different for the defender or the attacker, according to parameter
+    * @param defender true iff display is for defender, false if for opponent
+    */
+    public void display(boolean defender) {
+        String res="";
+        String[] alpha={"0","1","2","3","4","5","6","7","8","9"};
+        for (int a=0; a<alpha.length;a++){
+            res="\s"+res+ " | "+alpha[a];
+        }
+        for (int i=0; i<this.theCells.length;i++){
+            for(int j=0; j<this.theCells[i].length;j++){
+                if(j==0){
+                    res=res+"\n "+i;
+                }
+                res=" "+res+ " | " +this.theCells[i][j].toCharacter(defender);
+            }
+           res=res+" | ";
+        }
+        System.out.println(res);
+    }
+
  }
