@@ -34,3 +34,20 @@ import battleship.util.*;
         c.setShip(s);
         this.totLifePoints++;
     }
+
+    /**
+    * Shot a cell at a position p
+    * @param p the position of the cell that we want to shot
+    * @return the Answer of the shot
+    * @throws ArrayIndexOutOfBoundsException if the position isn't valid
+    */
+    public Answer shoot(Position p) throws ArrayIndexOutOfBoundsException{
+        Cell c= theCells[p.getX()][p.getY()];
+        Answer a=c.shot();
+        if(a==Answer.HIT||a==Answer.SUNK){
+            this.totLifePoints--;
+
+        }
+        return a;
+    }
+ }
