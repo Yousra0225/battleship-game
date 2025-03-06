@@ -91,4 +91,36 @@ import battleship.util.*;
         System.out.println(res);
     }
 
+    /**
+     * test if a ship can be placed vertically from position p on the sea
+     * @param shipToPlace the ship that want to place
+     * @param position the position where we want to place the ship
+     * @throws IllegalStateException If can't place the ship Vertically
+     */
+    private void testIfShipCanBePlacedVertically(Ship shipToPlace, Position position) throws IllegalStateException{
+        if (position.getX()>=this.theCells.length || position.getY()>=this.theCells.length){
+            throw new IllegalStateException();
+        }
+
+        int[] ships= new int[this.theCells[position.getY()].length];
+        int posInit=position.getX();
+        try {
+            for (int life=0; life<shipToPlace.getLifePoints();life++){
+                if(! this.theCells[posInit][position.getY()].empty()){
+                    throw new IllegalStateException();
+                }
+                posInit++;
+            }
+            posInit=position.getX();
+            for (int life=0; life<shipToPlace.getLifePoints();life++){
+                    ships[posInit]=1;
+                    posInit++;
+            }
+        }catch(ArrayIndexOutOfBoundsException e){
+            throw new IllegalStateException();
+
+        }
+
+    }
+
  }
