@@ -38,4 +38,11 @@ public class Cell {
     if ( this.getShip() == null)
       this.ship = s;
   }
+
+  /** Tell us if the ship in this cell has been shot.
+  * @return true if the ship in this cell has been shot, false else
+  */
+  public boolean hasBeenShot() {
+    return this.shot;
+  }
 }
