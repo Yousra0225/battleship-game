@@ -14,3 +14,11 @@ public class Cell {
     this.ship = null;
     this.shot = false;
   }
+
+  /** Provides the ship in this cell.
+  * @return the ship in this cell or null if she doesn't have ship
+  */
+  public Ship getShip() {
+    return this.ship;
+  }
+}
