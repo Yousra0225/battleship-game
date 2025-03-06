@@ -23,3 +23,14 @@ import battleship.util.*;
         }
         this.totLifePoints=0;
     }
+
+    /**
+    * add a ship s in the position p
+    * @param s ship that we want to add
+    * @param p the position where we want to add the ship
+    */
+    public void addShip(Ship s,Position p){
+        Cell c=this.theCells[p.getX()][p.getY()];
+        c.setShip(s);
+        this.totLifePoints++;
+    }
