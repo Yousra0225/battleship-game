@@ -50,4 +50,12 @@ import battleship.util.*;
         }
         return a;
     }
+
+    /**
+     * Calcul the total life points of ship also present
+     * @return the total life points of this sea
+     */
+    public int getRemainingLifePoints(){
+        return this.totLifePoints;
+    }
  }
