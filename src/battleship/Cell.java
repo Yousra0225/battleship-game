@@ -68,4 +68,30 @@ public class Cell {
           return Answer.MISSED;
       }
   }
+
+  /** Inform about the state of cell depending if you are defending player or attacking player.
+  * @param defender defender or attacker
+  * @return the information about the state
+  */
+  public char toCharacter(boolean defender){
+    if (defender){
+        if (this.ship==null){
+            return '~';
+        }
+        if (this.hasBeenShot()==false){
+            return 'B';
+        }
+
+        return '*';
+    }
+    else {
+        if (this.hasBeenShot()==false){
+            return '.';
+        }
+        if (this.ship==null){
+            return '~';
+        }
+        return '*';
+    }
+}
 }
