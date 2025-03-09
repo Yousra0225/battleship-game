@@ -50,4 +50,16 @@ public class SeaTest {
       Answer a=sea.shoot(p);
       assertEquals(Answer.MISSED,a);
     }
+
+    @Test
+    public void testAnswersIsHitAfterLastShot() {
+      Sea sea = new Sea(10,10);
+      Position p =new Position(2, 2);
+      Ship s = new Ship(2);
+      sea.addShip(s,p);
+      Answer a=sea.shoot(p);
+      assertEquals(Answer.HIT,a);
+      assertFalse(s.hasBeenSunk());
+    }
+
 }
