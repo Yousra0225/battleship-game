@@ -123,6 +123,22 @@ import battleship.util.*;
 
     }
 
+    /** add the ship b to this game’s sea. Ship is added vertically down from position p.
+    * The number of cells is determined by the ship life points.
+    * @param shipToPlace the ship to add
+    * @param position the position of the first (top) cell occupied by the ship
+    * @throws IllegalStateException if the ship b can not be placed on the sea
+    * (ship goes outside of the sea or some cell is not empty)
+    */
+    public void addShipVertically(Ship shipToPlace, Position position) throws IllegalStateException{
+        try{
+            testIfShipCanBePlacedVertically(shipToPlace, position);
+            addShip(shipToPlace, position, 1, 0);
+        }catch(IllegalStateException e){
+            throw new IllegalStateException();
+        }
+    }
+
     /**
      * test if a ship can be placed Horizontally from position p on the sea
      * @param shipToPlace the ship that want to place
