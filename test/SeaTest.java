@@ -74,13 +74,30 @@ public class SeaTest {
     }
 
     @Test(expected=IllegalStateException.class)
-      public void addShipVerticallyOutsideTheSea() {
+    public void addShipVerticallyOutsideTheSea() {
       Sea sea = new Sea(5,5);
       Position position = new Position(4,4);
       Ship ship = new Ship(7);
       sea.addShipVertically(ship,position);
     }
 
+    @Test(expected=IllegalStateException.class)
+    public void addShipVerticallyWhenShipIsAlreadyHere() {
+      Sea sea = new Sea(5,5);
+      Position position = new Position(3,3);
+      Ship ship = new Ship(2);
+      sea.addShipVertically(ship,position);
+      sea.addShipVertically(ship,position);
+    }
+
+  @Test
+    public void addShipVerticallyInsideTheSea() {
+      Sea sea = new Sea(5,5);
+      Position position = new Position(1,3);
+      Ship ship = new Ship(2);
+      sea.addShipVertically(ship,position);
+      assertEquals(sea.getRemainingLifePoints(),2);
+    }
 
 
 }
