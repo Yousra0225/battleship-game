@@ -11,4 +11,12 @@ public class ShipTest {
       ship.beenHitting();
       assertTrue(ship.getLifePoints() == 1 );
     }
+
+    @Test
+  public void ShipHasBeenSunkIfHeDoesntPoints() {
+    Ship ship = new Ship(1);
+    assertTrue(ship.getLifePoints() == 1 );
+    ship.beenHitting();
+    assertTrue(ship.hasBeenSunk());
+  }
 }
