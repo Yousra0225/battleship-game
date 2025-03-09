@@ -38,7 +38,7 @@ package battleship;
       * @return a text about this ship
       */
     public String toString() {
-      return "Ce bateau a "+ this.getLifePoints() +"points de vie.";
+      return "This Ship has "+ this.getLifePoints() +"life points.";
     }
 
   }
