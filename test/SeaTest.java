@@ -42,4 +42,12 @@ public class SeaTest {
     assertEquals(Answer.SUNK,a);
     assertTrue(s.hasBeenSunk());
     }
+
+    @Test
+    public void testAnswersIsMissedAfterLastShot() {
+      Sea sea = new Sea(10,10);
+      Position p =new Position(2, 2);
+      Answer a=sea.shoot(p);
+      assertEquals(Answer.MISSED,a);
+    }
 }
