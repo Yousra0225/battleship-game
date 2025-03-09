@@ -62,4 +62,16 @@ public class SeaTest {
       assertFalse(s.hasBeenSunk());
     }
 
+    @Test
+    public void testIfTheTotalOfLifePointsIfAShiphasBeenSunk(){
+      Sea sea = new Sea(10,10);
+      Position p =new Position(2, 2);
+      Ship s = new Ship(1);
+      sea.addShip(s,p);
+      Answer a=sea.shoot(p);
+      assertEquals(Answer.SUNK,a);
+      assertEquals(sea.getRemainingLifePoints(),0);
+    }
+
+
 }
