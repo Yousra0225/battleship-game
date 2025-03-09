@@ -114,7 +114,18 @@ public class SeaTest {
       Ship ship = new Ship(2);
       sea.addShipHorizontally(ship,position);
       sea.addShipHorizontally(ship,position);
-  }
+    }
 
-
+    @Test
+    public void addShipHorizontallyInsideTheSea() {
+      Sea sea = new Sea(5,5);
+      Position position = new Position(1,3);
+      Ship ship = new Ship(2);
+      sea.addShipHorizontally(ship,position);
+      assertEquals(sea.getRemainingLifePoints(),2);
+    }
+    //--------for running all ship-related tests---------
+    public static junit.framework.Test suite() {
+      return new junit.framework.JUnit4TestAdapter(battleship.SeaTest.class);
+   }
 }
