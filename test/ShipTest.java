@@ -19,4 +19,9 @@ public class ShipTest {
     ship.beenHitting();
     assertTrue(ship.hasBeenSunk());
   }
+
+  // ----------for running all ship-related tests--------------
+  public static junit.framework.Test suite() {
+     return new junit.framework.JUnit4TestAdapter(battleship.ShipTest.class);
+  }
 }
