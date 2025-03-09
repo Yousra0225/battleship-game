@@ -99,5 +99,13 @@ public class SeaTest {
       assertEquals(sea.getRemainingLifePoints(),2);
     }
 
+    @Test(expected=IllegalStateException.class)
+    public void addShipHorizontallyOutsideTheSea() {
+      Sea sea = new Sea(5,5);
+      Position position = new Position(4,4);
+      Ship ship = new Ship(7);
+      sea.addShipHorizontally(ship,position);
+    }
+
 
 }
