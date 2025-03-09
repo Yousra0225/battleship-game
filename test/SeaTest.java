@@ -24,4 +24,12 @@ public class SeaTest {
     sea.addShip(s, p);
     assertFalse(sea.getCell(p).getShip()==s2);
   }
+
+  @Test(expected=ArrayIndexOutOfBoundsException.class)
+  public void ShootIsInvalid() {
+    Sea sea = new Sea(5,5);
+    Position p = new Position(7,5);
+    sea.shoot(p);
+  }
+
 }
