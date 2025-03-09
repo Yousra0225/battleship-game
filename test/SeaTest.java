@@ -32,4 +32,14 @@ public class SeaTest {
     sea.shoot(p);
   }
 
+  @Test
+  public void testAnswersIsSunkAfterLastShot() {
+    Sea sea = new Sea(10,10);
+    Position p =new Position(2, 2);
+    Ship s= new Ship(1);
+    sea.addShip(s, p);
+    Answer a=sea.shoot(p);
+    assertEquals(Answer.SUNK,a);
+    assertTrue(s.hasBeenSunk());
+    }
 }
