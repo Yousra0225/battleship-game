@@ -1,5 +1,4 @@
 package battleship;
-package battleship;
 import battleship.util.*;
 /**
  * Class for Sea
