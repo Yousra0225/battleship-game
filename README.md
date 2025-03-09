@@ -20,3 +20,5 @@ Here’s a simplified breakdown of the game mechanics:
 3. ![Position](src/battleship/util/Position.java): represents the coordinates of a cell on the board (X and Y coordinates).
 
 4. ![Sea](src/battleship/Sea.java): represents the game board, where ships are placed. It manages the entire grid and allows ships to be added either vertically or horizontally. It also manages shooting by checking if a cell has been hit and if a ship has been sunk.
+
+**Project structure :** : ![project structure](data/structure.md)
