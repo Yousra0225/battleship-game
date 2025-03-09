@@ -187,4 +187,32 @@ import battleship.util.*;
         }
     }
 
+    /**
+     * add the ship to this sea from the position p if it's possible
+     * @param shipToPlace the ship that want to place
+     * @param position the position where we want to place the ship
+     * @param dx the coordinate x
+     * @param dy the coordinate y
+     * @throws IllegalStateException If the ship can't be placed Horizontally or Verticaly from position p
+     */
+    private void addShip(Ship shipToPlace, Position position, int dx, int dy) throws IllegalStateException{
+        if (dx==1 && dy==0){
+            int positionX=position.getX();
+            for (int life=0 ; life<shipToPlace.getLifePoints();life++){
+                this.addShip(shipToPlace, new Position((positionX), position.getY()));
+                positionX++;
+            }
+        }
+        else if(dx==0 && dy==1){
+            int positionY=position.getY();
+            for (int life=0 ; life<shipToPlace.getLifePoints();life++){
+                this.addShip(shipToPlace, new Position((position.getX()), positionY));
+                positionY++;
+            }
+        }
+        else {
+            throw new IllegalStateException();
+        }
+    }
+
  }
