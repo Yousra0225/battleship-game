@@ -107,5 +107,14 @@ public class SeaTest {
       sea.addShipHorizontally(ship,position);
     }
 
+    @Test(expected=IllegalStateException.class)
+    public void addShipHorizontallyWhenShipIsAlreadyHere() {
+      Sea sea = new Sea(5,5);
+      Position position = new Position(3,3);
+      Ship ship = new Ship(2);
+      sea.addShipHorizontally(ship,position);
+      sea.addShipHorizontally(ship,position);
+  }
+
 
 }
