@@ -1,5 +1,4 @@
 package battleship;
-import battleship.*;
 
 /**
   * Class for Cell
