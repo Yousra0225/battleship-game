@@ -44,4 +44,21 @@ public class Game {
     Position position = new Position(userIntX,userIntY);
     return position;
   }
+
+  /**
+  * Play the game
+  */
+  public void play(){
+    while(this.sea.getRemainingLifePoints() > 0){
+      this.sea.display(false);
+      try {
+        Position p = this.inputPosition();
+        System.out.println(this.sea.shoot(p));
+      }
+      catch(Exception e){
+        System.out.println("Please enter a good position.");
+        play();
+      }
+    }
+  }
 }
