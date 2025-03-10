@@ -29,4 +29,16 @@ public class CellTest {
     assertEquals(cell.shot(),Answer.HIT);
     assertTrue(cell.hasBeenShot());
   }
+
+  @Test
+  public void occupiedCellHitShipTwice() {
+    Cell cell = new Cell();
+    Ship ship = new Ship(2);
+    cell.setShip(ship);
+    assertFalse(cell.hasBeenShot());
+    assertEquals(cell.shot(),Answer.HIT);
+    assertTrue(cell.hasBeenShot());
+    assertEquals(cell.shot(),Answer.MISSED);
+    assertTrue(cell.hasBeenShot());
+  }
 }
