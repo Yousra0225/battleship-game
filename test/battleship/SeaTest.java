@@ -1,4 +1,5 @@
-import battleship.util.*;
+package battleship;
+import battleship.util.Position;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
