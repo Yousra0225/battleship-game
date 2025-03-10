@@ -54,4 +54,24 @@ public class CellTest {
     assertTrue(cell.hasBeenShot());
     assertEquals(cell.toCharacter(true),'*');
   }
+
+  @Test
+  public void testAboutToCharacterIfYouAreAttacker() {
+    Cell cell = new Cell();
+    assertFalse(cell.hasBeenShot());
+    assertEquals(cell.toCharacter(false),'.');
+    cell.shot();
+    assertTrue(cell.hasBeenShot());
+    assertEquals(cell.toCharacter(false),'~');
+    Ship ship = new Ship(4);
+    cell.setShip(ship);
+    cell.shot();
+    assertEquals(cell.toCharacter(false),'*');
+
+  }
+
+  public static junit.framework.Test suite() {
+     return new junit.framework.JUnit4TestAdapter(battleship.CellTest.class);
+  }
+
 }
