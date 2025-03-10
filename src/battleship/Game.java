@@ -13,4 +13,11 @@ public class Game {
   public Game(Sea sea){
     this.sea = sea;
   }
+/**
+  * Provides the sea of this game
+  * @return the sea of this game
+  */
+  public Sea getSea(){
+    return this.sea;
+  }
 }
