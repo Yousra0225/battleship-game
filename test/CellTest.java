@@ -41,4 +41,17 @@ public class CellTest {
     assertEquals(cell.shot(),Answer.MISSED);
     assertTrue(cell.hasBeenShot());
   }
+
+  @Test
+  public void testAboutToCharacterIfYouAreDefender() {
+    Cell cell = new Cell();
+    assertTrue(cell.getShip() == null);
+    assertEquals(cell.toCharacter(true),'~');
+    Ship ship = new Ship(4);
+    cell.setShip(ship);
+    assertEquals(cell.toCharacter(true),'B');
+    cell.shot();
+    assertTrue(cell.hasBeenShot());
+    assertEquals(cell.toCharacter(true),'*');
+  }
 }
