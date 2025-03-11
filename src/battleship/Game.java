@@ -1,6 +1,6 @@
 package battleship;
 import battleship.util.*;
-import io.*;
+import java.util.Scanner;
 /**
   * Class for Game
   */
@@ -29,14 +29,17 @@ public class Game {
   private Position inputPosition() throws ArrayIndexOutOfBoundsException{
     int userIntX = -1;
     int userIntY = -1;
+    Scanner scanner = new Scanner(System.in);
+
     try {
       System.out.print("Enter the int x coordinate: ");
-      userIntX = Input.readInt();
+      userIntX = scanner.nextInt();
       System.out.print("Enter the int y coordinate: ");
-      userIntY = Input.readInt();
+      userIntY = scanner.nextInt();
     }
-    catch (java.io.IOException e) {
+    catch (java.util.InputMismatchException e) {
       System.out.println("ERROR: Please enter a integer.");
+      scanner.next();
     }
     if ( userIntX == -1 || userIntY == -1) {
       throw new ArrayIndexOutOfBoundsException();
