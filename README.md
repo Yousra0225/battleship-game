@@ -22,3 +22,4 @@ Here’s a simplified breakdown of the game mechanics:
 4. ![Sea](src/battleship/Sea.java): represents the game board, where ships are placed. It manages the entire grid and allows ships to be added either vertically or horizontally. It also manages shooting by checking if a cell has been hit and if a ship has been sunk.
 
 **Project structure :** : ![project structure](data/structure.md)
+**Compilation of classes**
