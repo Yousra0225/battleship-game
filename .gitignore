@@ -136,7 +136,7 @@ flycheck_*.el
 ### Java ###
 # Compiled class file
 *.class
-
+/classes
 # Log file
 *.log
 
