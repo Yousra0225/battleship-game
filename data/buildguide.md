@@ -21,4 +21,9 @@
 |------|-------|
 |Compile all Java files in the battleship package|`javac -d classes src/battleship/*.java`|  
 
+3. Runing Tests  
 
+|Action|Command|
+|------|-------|
+|Compile test files|`javac -classpath test4poo.jar ./test/battleship/*.java`|
+|Run ![ShipTest](test/ShipTest.java)|`java -jar test4poo.jar battleship.ShipTest`|
