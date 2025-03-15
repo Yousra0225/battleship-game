@@ -8,9 +8,17 @@
 `export CLASSPATH="src:classes"`
 
 ## Compilation and Execution Commands
-1. Javadoc Generation 
+1. Javadoc Generation  
+
 |Action|Command|
 |------|-------|
 |Generate Javadoc for the package and sub-packages|`javadoc -d docs -subpackages battleship`|
 |Open the documentation|Open `docs/index.html`|
+
+2. Compilation of Classes  
+
+|Action|Command|
+|------|-------|
+|Compile all Java files in the battleship package|`javac -d classes src/battleship/*.java`|  
+
 
