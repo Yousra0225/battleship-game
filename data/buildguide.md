@@ -27,3 +27,5 @@
 |------|-------|
 |Compile test files|`javac -classpath test4poo.jar ./test/battleship/*.java`|
 |Run ![ShipTest](test/ShipTest.java)|`java -jar test4poo.jar battleship.ShipTest`|
+|Run ![CellTest](test/CellTest.java)|java -jar test4poo.jar battleship.CellTest|
+|Run ![SeaTest](test/SeaTest.java)|java -jar test4poo.jar battleship.SeaTest|
