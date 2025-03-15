@@ -30,10 +30,10 @@
 |Run ![CellTest](test/battleship/CellTest.java)|`java -jar test4poo.jar battleship.CellTest`|
 |Run ![SeaTest](test/battleship/SeaTest.java)|`java -jar test4poo.jar battleship.SeaTest`|  
 
-4. Running Main Programs
+4. Running Main Programs  
 |Action|Command|
 |------|-------|
-|Run ![FirstBattleShipMain](src/battleship/FirstBattleShipMain.java)|`java battleship.FirstBattleShipMain`|
+|Run ![FirstBattleShipMain](./src/battleship/FirstBattleShipMain.java)|`java battleship.FirstBattleShipMain`|
 |Run [SecondBattleShipMain](src/battleship/SecondBattleShipMain.java)|`java battleship.SecondBattleShipMain`|
 |Run [ThirdBattleShipMain](src/battleship/ThirdBattleShipMain.java)|`java battleship.ThirdBattleShipMain`|  
 
